@@ -10,7 +10,7 @@ page 50317 waas_P_FactBox
     {
         area(Content)
         {
-           
+
             group("Type")
             {
 
@@ -26,6 +26,20 @@ page 50317 waas_P_FactBox
                 {
                     ApplicationArea = ALl;
                 }
+                field("license plate"; Rec."license plate")
+                {
+                    ApplicationArea = ALl;
+                }
+                field(HSN; Rec.HSN)
+                {
+                    ApplicationArea = ALl;
+                }
+                field(TSN; Rec.TSN)
+                {
+                    ApplicationArea = ALl;
+
+                }
+
             }
             group(GroupName)
             {
@@ -63,7 +77,7 @@ page 50317 waas_P_FactBox
                 {
                     CaptionML = ENU = 'actual Tenant-Company',
                                     DEU = 'aktueller Mieter (Firma)';
-                                    Visible = rec.CompanyName <> '';
+                    Visible = rec.CompanyName <> '';
 
                     field(CompanyName; rec.CompanyName)
                     {

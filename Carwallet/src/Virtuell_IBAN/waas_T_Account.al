@@ -235,7 +235,19 @@ table 50308 virtual_bank_account
             CaptionML = ENU = 'latitude ', DEU = 'Breitengrad';
 
         }
+         field(57; "license plate"; Text[30])
+        {
+            CaptionML = ENU = 'License plate', DEU = 'Kennzeichen';
+        }
+        field(58; "HSN"; Text[30])
+        {
+            CaptionML = ENU = 'Manufacturer', DEU = 'Hersteller';
+        }
 
+        field(59; "TSN"; Text[30])
+        {
+            CaptionML = ENU = 'TSN', DEU = 'TSN';
+        }
 
 
 

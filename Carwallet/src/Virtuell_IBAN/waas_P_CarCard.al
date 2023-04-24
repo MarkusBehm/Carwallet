@@ -203,7 +203,7 @@ page 50315 waas_P_Card
 
 
 
-            group(de)
+            group("Create Car")
             {
                 CaptionML = ENU = 'Create Car',
                             DEU = 'Auto erstellen';
@@ -216,7 +216,7 @@ page 50315 waas_P_Card
 
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'Germany', DEU = 'Deutschland';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = New;
                     PromotedIsBig = true;
@@ -242,7 +242,7 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'United Kingdom', DEU = 'England';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = New;
                     PromotedIsBig = true;
@@ -267,7 +267,7 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'France', DEU = 'Frankreich';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = New;
                     PromotedIsBig = true;
@@ -292,7 +292,7 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'Italy', DEU = 'Italien';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = new;
                     PromotedIsBig = true;
@@ -317,7 +317,7 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'Netherland', DEU = 'Niederlande';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = New;
                     PromotedIsBig = true;
@@ -342,7 +342,7 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = Basic, Suite;
                     CaptionML = ENU = 'Portugal', DEU = 'Portugal';
-                    Image = Approve;
+                    Image = SetupList;
                     Promoted = true;
                     PromotedCategory = new;
                     PromotedIsBig = true;

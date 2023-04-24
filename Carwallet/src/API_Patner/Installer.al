@@ -131,148 +131,6 @@ codeunit 50302 WaaS_Installer
         testvIBAN(kundeId, 'CarWallet', 'Lena', 'Lohbinger', true, false, false, true, '', 5);
     end;
 
-    procedure textCaseVIBAN()
-    begin
-
-        testviban('VON', 'Wohnwallet', 'ElectroHeinz GmbH', '', false, false, false, false, 'ElectroHeinz GmbH', 0);
-        /*
-        testviban('TKE', 'Wohnwallet','Vodafone', '', false, false, false, false, 'Vodafone', 0);
-        testviban('TKE', 'Wohnwallet','Lift4U GmbH', '', false, false, false, false, 'Lift4U GmbH', 0);
-        testviban('TKE', 'Wohnwallet','VONOVIA', '', false, false, false, false, 'VONOVIA', 0);
-        testviban('TKE', 'Wohnwallet','LiftService Engler', '', false, false, false, false, 'LiftService Engler', 0);
-        testviban('TKE', 'Wohnwallet','24Lift GmbH', '', false, false, false, false, '24Lift GmbH', 0);
-        testviban('TKE', 'Wohnwallet','Reinigungs-service', '', false, false, false, false, 'Reinigungs-service', 0);
-        testviban('TKE','Wohnwallet', 'TÜV Süd GmbH', '', false, false, false, false, 'TÜV Süd GmbH', 0);
-        testviban('TKE', 'Wohnwallet','RuhrElevator OHG', '', false, false, false, false, 'RuhrElevator OHG', 0);
-    */
-
-        //noraml alles cool
-        testvIBAN('VON', 'Wohnwallet', 'Dennis', 'Hellweg', false, false, false, false, '', 7);
-
-        //wallet überzogen
-        testvIBAN('VON', 'Wohnwallet', 'Tom', 'Ford', true, false, true, true, '', 1);
-        //gelöscht kein api call mehr möglich
-        //block walltet riskcheck
-        testvIBAN('VON', 'Wohnwallet', 'Tatjana', 'Trump', true, false, false, true, '', 2);
-
-        testvIBAN('VON', 'Wohnwallet', 'James', 'Wellkamp', false, true, false, true, '', 3);
-
-
-
-        //TKE
-        testvIBAN('VON', 'Wohnwallet', 'Max', 'Muster', false, false, false, true, '', 4);
-        //Insurance
-        testvIBAN('VON', 'Wohnwallet', 'Leo', 'Muster', false, false, false, true, '', 5);
-        //Insurance
-        testvIBAN('VON', 'Wohnwallet', 'Dennis', 'Muster', false, false, false, true, '', 7);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Erhard', 'Muster', false, false, false, true, '', 5);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Marcel', 'Muster', false, false, false, true, '', 4);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Lisa', 'Muster', false, false, false, true, '', 3);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Gina', 'Muster', false, false, false, true, '', 2);
-        //Aufladen
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Teresia', 'Muster', false, false, false, true, '', 1);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Gunna', 'Muster', false, false, false, true, '', 4);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Ahmend', 'Muster', false, false, false, true, '', 6);
-        //Aufladen
-        testvIBAN('VON', 'Wohnwallet', 'Klaus', 'Muster', false, false, false, true, '', 3);
-
-        //noraml alles cool
-        testvIBAN('VON', 'Wohnwallet', 'Klara', 'Soma', false, false, false, true, '', 4);
-        testvIBAN('VON', 'Wohnwallet', 'Anna', 'Hartmann', false, false, false, true, '', 4);
-        testvIBAN('VON', 'Wohnwallet', 'Donata', 'Timber', false, false, false, true, '', 4);
-
-        //wallet überzogen
-        testvIBAN('VON', 'Wohnwallet', 'Matthias', 'Illinger', true, false, true, true, '', 3);
-        //gelöscht kein api call mehr möglich
-        testvIBAN('VON', 'Wohnwallet', 'Max', 'Flachinger', false, true, false, true, '', 6);
-        //block walltet riskcheck
-        testvIBAN('VON', 'Wohnwallet', 'Lena', 'Lohbinger', true, false, false, true, '', 5);
-
-
-
-
-
-
-    end;
-
-    procedure textCaseVIBAN_ImmoverwalterWallet()
-    begin
-
-        testviban('HVA', 'ImmoverwalterWallet', 'ElectroHeinz GmbH', '', false, false, false, false, 'ElectroHeinz GmbH', 0);
-        /*
-        testviban('TKE', 'ImmoverwalterWallet','Vodafone', '', false, false, false, false, 'Vodafone', 0);
-        testviban('TKE', 'ImmoverwalterWallet','Lift4U GmbH', '', false, false, false, false, 'Lift4U GmbH', 0);
-        testviban('TKE', 'ImmoverwalterWallet','VONOVIA', '', false, false, false, false, 'VONOVIA', 0);
-        testviban('TKE', 'ImmoverwalterWallet','LiftService Engler', '', false, false, false, false, 'LiftService Engler', 0);
-        testviban('TKE', 'ImmoverwalterWallet','24Lift GmbH', '', false, false, false, false, '24Lift GmbH', 0);
-        testviban('TKE', 'ImmoverwalterWallet','Reinigungs-service', '', false, false, false, false, 'Reinigungs-service', 0);
-        testviban('TKE','ImmoverwalterWallet', 'TÜV Süd GmbH', '', false, false, false, false, 'TÜV Süd GmbH', 0);
-        testviban('TKE', 'ImmoverwalterWallet','RuhrElevator OHG', '', false, false, false, false, 'RuhrElevator OHG', 0);
-    */
-
-        //noraml alles cool
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Dennis', 'Hellweg', false, false, false, false, '', 7);
-
-        //wallet überzogen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Tom', 'Ford', true, false, true, true, '', 1);
-        //gelöscht kein api call mehr möglich
-        //block walltet riskcheck
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Tatjana', 'Trump', true, false, false, true, '', 2);
-
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'James', 'Wellkamp', false, true, false, true, '', 3);
-
-
-
-        //TKE
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Max', 'Muster', false, false, false, true, '', 4);
-        //Insurance
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Leo', 'Muster', false, false, false, true, '', 5);
-        //Insurance
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Dennis', 'Muster', false, false, false, true, '', 7);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Erhard', 'Muster', false, false, false, true, '', 5);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Marcel', 'Muster', false, false, false, true, '', 4);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Lisa', 'Muster', false, false, false, true, '', 3);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Gina', 'Muster', false, false, false, true, '', 2);
-        //Aufladen
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Teresia', 'Muster', false, false, false, true, '', 1);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Gunna', 'Muster', false, false, false, true, '', 4);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Ahmend', 'Muster', false, false, false, true, '', 6);
-        //Aufladen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Klaus', 'Muster', false, false, false, true, '', 3);
-
-        //noraml alles cool
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Klara', 'Soma', false, false, false, true, '', 4);
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Anna', 'Hartmann', false, false, false, true, '', 4);
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Donata', 'Timber', false, false, false, true, '', 4);
-
-        //wallet überzogen
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Matthias', 'Illinger', true, false, true, true, '', 3);
-        //gelöscht kein api call mehr möglich
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Max', 'Flachinger', false, true, false, true, '', 6);
-        //block walltet riskcheck
-        testvIBAN('HVA', 'ImmoverwalterWallet', 'Lena', 'Lohbinger', true, false, false, true, '', 5);
-
-
-
-
-
-
-    end;
-
     procedure testviban(apiPartner_p: COde[50]; caseB: Text[20]; vor_p: Text[20]; nach_p: text[20]; block: Boolean; deleted: Boolean; minus: Boolean; company_P: Boolean; compName: Text[100]; vItemNo_P: Integer)
     var
         partner: Record API_Partner;
@@ -305,6 +163,10 @@ codeunit 50302 WaaS_Installer
         vIBANRec.email := vor_p + '.' + nach_p + '@gmail.com';
         vIBANRec.vItem := vItemNo_P;
         vIBANRec.VIN := 'WPOZZZ91ZGS15' + format(Random(99999));
+        vIBANRec."license plate" := 'HH-AL-098';
+        vIBANRec."HSN" := '0058';
+        vIBANRec."TSN" := 'AJO 00018';
+        
         vIBANRec.Insert();
         Commit();
 
@@ -336,23 +198,10 @@ codeunit 50302 WaaS_Installer
 
             vibanTrx.collection_status := vibanTrx.collection_status::" ";
             vibanTrx.vIBAN := vIBANRec.virtual_iban;
-            if caseB = 'CarWallet' then begin
-                vibanTrx.Amt := Random(122258);
-                prgetRandomTrasxText_Carwallet(vibanTrx, 1, partner.Name);
-                idate := 10;
-            end;
-            if caseB = 'WohnWallet' then begin
-                prgetRandomTrasxText(vibanTrx, idate);
-            end;
-            if caseB = 'ImmoverwalterWallet' then begin
-                prgetRandomTrasxText(vibanTrx, idate);
-            end;
+            prgetRandomTrasxText_Carwallet(vibanTrx, idate, partner.Name);
+            idate := 10;
             vibanTrx.Ccy := 'EUR';
-            if caseB <> 'WohnWallet' then begin
-                if vItemNo_P <> 4 then
-                    vibanTrx.Insert();
-            end else
-                vibanTrx.Insert();
+            vibanTrx.Insert();
 
 
             vibanTrx.techID := vibanTrx.techID + 1;
@@ -360,12 +209,8 @@ codeunit 50302 WaaS_Installer
             vibanTrx.vIBAN := vIBANRec.virtual_iban;
             vibanTrx.apipartnerId := apiPartner_p;
             vibanTrx.collection_status := vibanTrx.collection_status::not_initiated;
-            if caseB = 'CarWallet' then begin
-                prgetRandomTrasxText_Carwallet(vibanTrx, 1, partner.Name);
-                vibanTrx.Dbtr_Nm := vIBANRec.Fullname;
-            end;
-            if caseB = 'WohnWallet' then prgetRandomTrasxText(vibanTrx, idate);
-            if caseB = 'ImmoverwalterWallet' then prgetRandomTrasxText(vibanTrx, idate);
+            prgetRandomTrasxText_Carwallet(vibanTrx, idate, partner.Name);
+            vibanTrx.Dbtr_Nm := vIBANRec.Fullname;
 
             vibanTrx.Ustrd := vibanTrx.Dbtr_Nm + ',' + vibanTrx.Ustrd;
             vibanTrx.Dbtr_Nm := vibanTrx.Dbtr_Nm;//'TK Elevator GmbH';
@@ -515,24 +360,54 @@ codeunit 50302 WaaS_Installer
             1:
                 begin
 
-                    vibanTrx.Ustrd := '#VIN Porsche 911';
+                    vibanTrx.Ustrd := '#Rent'+format(Today)+Format(Today+10);
                     vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 495.55;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
                     if vIbanRec.FindFirst() then
                         vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
             2:
                 begin
+                    vibanTrx.Ustrd := '#ENBW Strom 26.88KwH ID:32Ytf16a54a';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 45.85;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
             3:
                 begin
+                    vibanTrx.Ustrd := '#Zusatzfahrer Paket 4.78 ID:65asxx23';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 5.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
+
                 end;
 
             4:
                 begin
+                    
+                    vibanTrx.Ustrd := '#ARAL PowerCharge 12.55KwH';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 25.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
+
                 end;
             5:
                 begin
+                    
+                    vibanTrx.Ustrd := '#CARGlass Rech.Nr.234511';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 655.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
+
                 end;
             6:
                 begin
