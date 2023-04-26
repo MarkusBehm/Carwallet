@@ -135,6 +135,16 @@ page 50315 waas_P_Card
                 {
                     ApplicationArea = All;
                 }
+                field("license plate"; Rec."license plate")
+                {
+                    ApplicationArea = All;
+                }
+
+                field(HSN; Rec.HSN)
+                {
+                    ApplicationArea = All;
+                }
+
 
             }
 
@@ -416,7 +426,7 @@ page 50315 waas_P_Card
                     begin
                         if rec.long = '' then
                             Hyperlink('http://www.google.com/maps/place/53.551086,9.993682/@53.551086,9.993682,17z');
-                            
+
                         // Hyperlink('http://maps.google.com/?q='+rec.long+','+rec.lathttp://maps.google.com/?q=53.551086,9.993682);
 
 

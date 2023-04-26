@@ -9,7 +9,6 @@ page 50321 waas_P_Transactions
     Editable = false;
     SourceTable = waas_T_Transactions;
 
-
     layout
     {
         area(Content)
@@ -41,7 +40,7 @@ page 50321 waas_P_Transactions
                 }
                 field(Dbtr_Nm; rec.Dbtr_Nm)
                 {
-                    CaptionML = ENU = 'Debtor', DEU = ' Zahlender';
+                    CaptionML = ENU = 'Debtor', DEU = ' Zahler';
                     ApplicationArea = All;
                 }
 
@@ -91,4 +90,8 @@ page 50321 waas_P_Transactions
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        rec.setfilter(Amt,'>%1',0);
+    end;
 }

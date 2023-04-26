@@ -19,9 +19,9 @@ codeunit 50302 WaaS_Installer
         case caseB of
             'CarWallet':
                 begin
-                    testAPIPartner('Hamburg', 'HH1');
-                    testAPIPartner('Köln', 'K1');
-                    testAPIPartner('München', 'M1');
+                    testAPIPartner('Sixt Hamburg', 'HH1');
+                    testAPIPartner('Sixt Köln', 'K1');
+                    testAPIPartner('Sixt München', 'M1');
                     textCaseVIBAN_CarWallet('HH1');
                     textCaseVIBAN_CarWallet('K1');
                     textCaseVIBAN_CarWallet('M1');
@@ -166,7 +166,7 @@ codeunit 50302 WaaS_Installer
         vIBANRec."license plate" := 'HH-AL-098';
         vIBANRec."HSN" := '0058';
         vIBANRec."TSN" := 'AJO 00018';
-        
+
         vIBANRec.Insert();
         Commit();
 
@@ -199,7 +199,7 @@ codeunit 50302 WaaS_Installer
             vibanTrx.collection_status := vibanTrx.collection_status::" ";
             vibanTrx.vIBAN := vIBANRec.virtual_iban;
             prgetRandomTrasxText_Carwallet(vibanTrx, idate, partner.Name);
-            idate := 10;
+
             vibanTrx.Ccy := 'EUR';
             vibanTrx.Insert();
 
@@ -360,7 +360,7 @@ codeunit 50302 WaaS_Installer
             1:
                 begin
 
-                    vibanTrx.Ustrd := '#Rent'+format(Today)+Format(Today+10);
+                    vibanTrx.Ustrd := 'Wagenmiete ' + format(Today) + '- ' + Format(Today + 10);
                     vibanTrx.Dbtr_Nm := debtor;
                     vibanTrx.Amt := 495.55;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
@@ -369,7 +369,7 @@ codeunit 50302 WaaS_Installer
                 end;
             2:
                 begin
-                    vibanTrx.Ustrd := '#ENBW Strom 26.88KwH ID:32Ytf16a54a';
+                    vibanTrx.Ustrd := 'EnBW Ladestrom 26.88KwH ID:32Ytf16a54a';
                     vibanTrx.Dbtr_Nm := debtor;
                     vibanTrx.Amt := 45.85;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
@@ -378,7 +378,7 @@ codeunit 50302 WaaS_Installer
                 end;
             3:
                 begin
-                    vibanTrx.Ustrd := '#Zusatzfahrer Paket 4.78 ID:65asxx23';
+                    vibanTrx.Ustrd := 'Zusatzfahrer Paket 4.78 ID:65asxx23';
                     vibanTrx.Dbtr_Nm := debtor;
                     vibanTrx.Amt := 5.99;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
@@ -389,8 +389,8 @@ codeunit 50302 WaaS_Installer
 
             4:
                 begin
-                    
-                    vibanTrx.Ustrd := '#ARAL PowerCharge 12.55KwH';
+
+                    vibanTrx.Ustrd := 'ARAL PowerCharge 12.55KwH';
                     vibanTrx.Dbtr_Nm := debtor;
                     vibanTrx.Amt := 25.99;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
@@ -400,8 +400,8 @@ codeunit 50302 WaaS_Installer
                 end;
             5:
                 begin
-                    
-                    vibanTrx.Ustrd := '#CARGlass Rech.Nr.234511';
+
+                    vibanTrx.Ustrd := 'CAR Glass Rech.Nr.234511';
                     vibanTrx.Dbtr_Nm := debtor;
                     vibanTrx.Amt := 655.99;
                     vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
@@ -411,21 +411,51 @@ codeunit 50302 WaaS_Installer
                 end;
             6:
                 begin
+                    vibanTrx.Ustrd := 'ARAL PowerCharge 10.55KwH';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 25.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
 
             7:
                 begin
+                    vibanTrx.Ustrd := 'Clean&Repair GmbH';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 25.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
 
             8:
                 begin
+                    vibanTrx.Ustrd := 'Stadt Hamburg Finanzbehörde Kfz-Steuer 2023';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 356.00;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
             9:
                 begin
+                    vibanTrx.Ustrd := 'Haftpflicht 2023';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 625.99;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
 
             10:
                 begin
+                    vibanTrx.Ustrd := 'Hauptuntersuchung / Zulassung/Abmeldung';
+                    vibanTrx.Dbtr_Nm := debtor;
+                    vibanTrx.Amt := 89.89;
+                    vIbanRec.SetRange(Fullname, vibanTrx.Dbtr_Nm);
+                    if vIbanRec.FindFirst() then
+                        vibanTrx.CdtrAcct_Id_Iban := vIbanRec.virtual_iban;
                 end;
 
         end;

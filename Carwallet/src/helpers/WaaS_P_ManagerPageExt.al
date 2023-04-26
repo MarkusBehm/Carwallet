@@ -11,7 +11,7 @@ pageextension 50303 Financingsolution extends 9022
 
         addlast(Sections)
         {
-            group("Wallet")
+            group("CarWallet")
             {
                 group(Wallets)
                 {
